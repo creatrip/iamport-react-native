@@ -169,6 +169,7 @@ export function PaymentWebView({
             source={{ html: WEBVIEW_SOURCE_HTML }}
             onLoadEnd={onLoadEnd}
             onMessage={onMessage}
+            javascriptEnabled
             originWhitelist={['*']} // https://github.com/facebook/react-native/issues/19986
             onShouldStartLoadWithRequest={onShouldStartLoadWithRequest}
           />
