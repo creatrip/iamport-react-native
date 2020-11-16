@@ -69,7 +69,7 @@ class ValidationForPayment extends Validation {
       }
     }
 
-    if (language && pg !== 'paypal') {
+    if (language && pg !== 'paypal' && pg !== 'eximbay') {
       if (EN_AVAILABLE_PG.indexOf(pg) !== -1) { 
         if (LANGUAGE.indexOf(language) !== -1) {
           this.isValid = false;
