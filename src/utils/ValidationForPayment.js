@@ -1,5 +1,5 @@
 import Validation from './Validation';
-import { PG, LANGUAGE, EN_AVAILABLE_PG } from '../constants';
+import { PG, LANGUAGE, EN_AVAILABLE_PG, PG_WILDCARDS } from '../constants';
 
 class ValidationForPayment extends Validation {
   constructor(userCode, loading, callback, data) {
@@ -69,7 +69,7 @@ class ValidationForPayment extends Validation {
       }
     }
 
-    if (language && pg !== 'paypal' && pg !== 'eximbay') {
+    if (language && pg !== 'paypal' && PG_WILDCARDS.indexOf(pg) !== -1) {
       if (EN_AVAILABLE_PG.indexOf(pg) !== -1) { 
         if (LANGUAGE.indexOf(language) !== -1) {
           this.isValid = false;
