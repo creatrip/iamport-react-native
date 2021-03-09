@@ -45,6 +45,7 @@ const PAY_METHOD = [
 const CURRENCY = ['KRW', 'USD', 'EUR', 'JPY'];
 const LANGUAGE = ['ko', 'en'];
 const EN_AVAILABLE_PG = ['inicis', 'html5_inicis', 'uplus', 'nice'];
+const PG_WILDCARDS = ['eximbay'];
 const CARRIERS = ['SKT', 'KTF', 'LGT', 'MVNO'];
 
 const WEBVIEW_SOURCE_HTML = `
@@ -66,6 +67,7 @@ export {
   CURRENCY,
   LANGUAGE,
   EN_AVAILABLE_PG,
+  PG_WILDCARDS,
   CARRIERS,
   WEBVIEW_SOURCE_HTML,
 };
